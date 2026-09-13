@@ -1,9 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ArrowUpRight, Mail, MapPin, User } from "lucide-react";
 
-/* Looks for pic.jpg sitting next to this file (src/pic.jpg). If it isn't
-   there yet, this stays an empty object and the fallback icon is used —
-   no build error either way. Drop a pic.jpg into /src to swap it in. */
+/* i put i dont laik in .gitignore so you wont see my pic.jpg, haha bruh */
 const picModules = import.meta.glob("./pic.jpg", { eager: true, import: "default" });
 const PIC_URL = Object.values(picModules)[0] || null;
 
@@ -16,87 +14,80 @@ const PROFILE = {
   role: "Game Developer, Software Engineer",
   location: "Batam, Indonesia",
   status: "Currently open to new roles",
-  stack: "React, TypeScript, Node.js, PostgreSQL, and Docker",
+  stack: "React, TypeScript, Node.js, mySQL, Roblox Studio, Unity.",
   bio:
-    "I build web products end to end, from data models and APIs to the interfaces people actually touch. Six years in, I care most about the parts that don't show up in a demo: load times, error states, the code someone else has to read at 2am.",
-  email: "alex.rivera@example.com",
-  github: "https://github.com/",
-  linkedin: "https://linkedin.com/",
+    "I build web products end to end, from data models and APIs to the interfaces people actually touch. Six years in, I care most about the parts that don't show up in a demo: load times, error states, the code someone else has to read at 2am. Time spent shipping in Roblox Studio on the side shows up here too, mostly as an unreasonable obsession with frame budgets and input feel.",
+  email: "aphelion.idn@gmail.com",
+  github: "https://github.com/aphelionidn",
+  linkedin: "https://linkedin.com/in/atalzen",
 };
 
 const SKILLS = [
-  { category: "Languages", items: "JavaScript, TypeScript, Python, and Go" },
-  { category: "Frontend", items: "React, Next.js, Redux, and Tailwind CSS" },
+  { category: "Languages", items: "JavaScript, TypeScript, Python, C, C++, C#, and LUA" },
+  { category: "Frontend", items: "React, Next.js, Redux, and CSS" },
   { category: "Backend", items: "Node.js, Express, PostgreSQL, and Redis" },
   { category: "Infrastructure", items: "Docker, AWS, GitHub Actions, and Terraform" },
+  { category: "Game Dev", items: "Roblox Studio, Lua scripting, physics simulation, 3D Modelling, state machines, client-server architecture" },
 ];
 
 const PROJECTS = [
   {
-    title: "Ledger",
-    description:
-      "A shared expense tracker for small teams, built around real-time syncing, receipt scanning, and monthly settlement reports.",
-    tags: "React, Node.js, PostgreSQL",
-    tone: "#8A6A4D",
-    liveUrl: "https://example.com",
-    codeUrl: "https://github.com/",
+  title: "SMAN 19 BATAM inside ROBLOX",
+  description:
+    "A multi-building recreation of my school in Roblox, built for incoming students to explore and familiarize themselves before arriving. Handled 50 concurrent players, with accurate 3D layouts of classrooms, hallways, courtyards, and hangout spaces. Self-taught 3D modeling throughout the project to match real architectural details; systems handle class transitions, NPC interactions, and shared explorable spaces.",
+  tags: "Roblox, Lua, 3D Modeling, Multiplayer Systems",
+  tone: "#7A6D5C",
+  liveUrl: "https://www.roblox.com/games/17868850803/",
   },
   {
-    title: "Northwind CLI",
+    title: "Make a Boat",
     description:
-      "A command-line tool that turns OpenAPI specs into typed client libraries, cutting integration setup from a day to minutes.",
-    tags: "Go, TypeScript",
-    tone: "#5B6B5E",
-    liveUrl: "https://example.com",
-    codeUrl: "https://github.com/",
-  },
-  {
-    title: "Fieldnote",
-    description:
-      "An offline-first notes app for researchers working without reliable internet. It syncs automatically, conflict-free, once they're back online.",
-    tags: "React Native, SQLite",
-    tone: "#6C5A6B",
-    liveUrl: "https://example.com",
-    codeUrl: "https://github.com/",
+      "A roblox game about buying blocks from conveyor, to strategically make a boat and launch to earn coins to make a stronger boat.",
+    tags: "Roblox, Lua, Multiplayer Systems, Collaboration",
+    tone: "#6c7880",
+    liveUrl: "https://www.roblox.com/games/81514259936822/",
   },
 ];
 
 const EXPERIENCE = [
   {
-    range: "2023 — Now",
-    role: "Senior Software Engineer",
-    org: "Beacon Systems",
+    range: "2026 — Now",
+    role: "Junior Software Engineer",
+    org: "Aphelion Softworks, Co.",
     points: [
-      "Led the rebuild of the billing platform, cutting invoice-generation errors by 90%",
-      "Mentored three junior engineers through their first production launches",
-      "Introduced contract testing between five internal services",
+    "Developed cloud infrastructure components for a data pipeline processing sensor data from NeuralNodes hardware",
+    "Optimized pipeline performance and reliability to handle real-time Smart City/Highway data streams",
+    "Collaborated with senior engineers on system architecture and deployment across cloud-native services",
     ],
   },
   {
-    range: "2021 — 2023",
-    role: "Software Engineer",
-    org: "Harborline",
+    range: "2026 — Now",
+    role: "Computer Science Student",
+    org: "Politeknik Negeri Batam",
     points: [
-      "Built the customer-facing analytics dashboard used by 12,000+ accounts",
-      "Reduced average API response time from 800ms to 190ms",
+      "Core curriculum in software engineering, design patterns, and development methodologies",
+    "Web application development using modern frameworks and technologies",
+    "Database design, optimization, and implementation across relational systems",
+    "Server administration, deployment, and infrastructure management",
     ],
   },
   {
-    range: "2019 — 2021",
-    role: "Software Engineer",
-    org: "Fenwick & Rowe",
+    range: "2024 — 2025",
+    role: "Lead Game Programmer",
+    org: "boatload",
     points: [
-      "Shipped the company's first mobile app from prototype to App Store",
-      "Set up the CI/CD pipeline still in use across four teams today",
+     "Architected and shipped boat mechanics system handling movement physics, steering input, and water interaction for 34k+ concurrent players",
+    "Built collision and physics systems ensuring stable boat handling across varied terrain and multiplayer scenarios",
+    "Collaborated on building/structure scripts to integrate boating mechanics with explorable environments",
     ],
   },
 ];
 
 const ACHIEVEMENTS = [
-  { value: "90%", suffix: "", label: "fewer billing errors after the platform rebuild" },
-  { value: "4.2", suffix: "x", label: "improvement in API throughput at Harborline" },
-  { value: "12", suffix: "k+", label: "active accounts on a shipped analytics tool" },
-  { value: "3", suffix: "", label: "engineers mentored into senior roles" },
+  { value: "1", suffix: "st", label: "in the Robot Challenge category at the competition organized by JA RAISE and Caterpillar." },
+  { value: "2.5", suffix: "x", label: "improvement in API development for cloud API structures." },
+  { value: "37.8", suffix: "m+", label: "million total game visits." },
+  { value: "3", suffix: "", label: "programmers mentored in developing the core framework for the game Make a Boat." },
 ];
 
 const NAV = [
@@ -779,8 +770,8 @@ export default function Portfolio() {
             <div className="profile-meta">
               <div className="row reveal" data-reveal><MapPin size={15} /> {PROFILE.location}</div>
               <div className="row reveal" data-reveal><Mail size={15} /> {PROFILE.email}</div>
-              <div className="row reveal" data-reveal><GithubIcon size={15} /> github.com/yourhandle</div>
-              <div className="row reveal" data-reveal><LinkedinIcon size={15} /> linkedin.com/in/yourhandle</div>
+              <div className="row reveal" data-reveal><GithubIcon size={15} /> github.com/aphelion.idn</div>
+              <div className="row reveal" data-reveal><LinkedinIcon size={15} /> linkedin.com/in/atalzen</div>
             </div>
           </div>
         </div>
