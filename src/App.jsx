@@ -23,9 +23,9 @@ const PROFILE = {
 };
 
 const SKILLS = [
-  { category: "Languages", items: "JavaScript, TypeScript, Python, C, C++, C#, and LUA" },
+  { category: "Languages", items: "Assembly, JavaScript, TypeScript, Python, C, C++, C#, and LUA" },
   { category: "Frontend", items: "React, Next.js, Redux, and CSS" },
-  { category: "Backend", items: "Node.js, Express, PostgreSQL, and Redis" },
+  { category: "Backend", items: "Node.js, Express, MySQL, PostgreSQL, and Redis" },
   { category: "Infrastructure", items: "Docker, AWS, GitHub Actions, and Terraform" },
   { category: "Game Dev", items: "Roblox Studio, Lua scripting, physics simulation, 3D Modelling, state machines, client-server architecture" },
 ];
