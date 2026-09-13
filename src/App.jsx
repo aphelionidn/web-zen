@@ -12,9 +12,9 @@ const PIC_URL = Object.values(picModules)[0] || null;
 /* ------------------------------------------------------------------ */
 
 const PROFILE = {
-  name: "Alex Rivera",
-  role: "Full-stack software engineer",
-  location: "Jakarta, Indonesia",
+  name: "Aditya Anandika Putra",
+  role: "Game Developer, Software Engineer",
+  location: "Batam, Indonesia",
   status: "Currently open to new roles",
   stack: "React, TypeScript, Node.js, PostgreSQL, and Docker",
   bio:
