@@ -53,7 +53,7 @@ const EXPERIENCE = [
   {
     range: "2026 — Now",
     role: "Junior Software Engineer",
-    org: "Aphelion Softworks, Co.",
+    org: "Aphelion Networks, Co.",
     points: [
     "Developed cloud infrastructure components for a data pipeline processing sensor data from NeuralNodes hardware",
     "Optimized pipeline performance and reliability to handle real-time Smart City/Highway data streams",
