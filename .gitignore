@@ -13,7 +13,7 @@ dist-ssr
 *.local
 
 # Editor directories and files
-.src/pic.jpg
+src/pic.jpg
 .vscode/*
 !.vscode/extensions.json
 .idea
