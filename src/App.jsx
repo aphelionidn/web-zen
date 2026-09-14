@@ -73,7 +73,7 @@ const EXPERIENCE = [
   },
   {
     range: "2024 — 2025",
-    role: "Lead Game Programmer",
+    role: "Main Game Programmer",
     org: "boatload",
     points: [
      "Architected and shipped boat mechanics system handling movement physics, steering input, and water interaction for 34k+ concurrent players",
