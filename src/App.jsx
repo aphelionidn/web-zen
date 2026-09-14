@@ -36,7 +36,7 @@ const PROJECTS = [
   description:
     "A multi-building recreation of my school in Roblox, built for incoming students to explore and familiarize themselves before arriving. Handled 50 concurrent players, with accurate 3D layouts of classrooms, hallways, courtyards, and hangout spaces. Self-taught 3D modeling throughout the project to match real architectural details; systems handle class transitions, NPC interactions, and shared explorable spaces.",
   tags: "Roblox, Lua, 3D Modeling, Multiplayer Systems",
-  tone: "#7A6D5C",
+  tone: "#d2401c",
   liveUrl: "https://www.roblox.com/games/17868850803/",
   },
   {
@@ -44,7 +44,7 @@ const PROJECTS = [
     description:
       "A roblox game about buying blocks from conveyor, to strategically make a boat and launch to earn coins to make a stronger boat.",
     tags: "Roblox, Lua, Multiplayer Systems, Collaboration",
-    tone: "#6c7880",
+    tone: "#399cde",
     liveUrl: "https://www.roblox.com/games/81514259936822/",
   },
 ];
